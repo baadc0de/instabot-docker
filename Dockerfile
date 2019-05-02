@@ -7,11 +7,11 @@ WORKDIR /app
 # Checkout latest instabot.py source code
 RUN git clone https://github.com/instabot-py/instabot.py.git build
 # Checkout instabot version 1.2.5
-RUN cd build && git checkout f56aad4a85dd40dac53e370ec81b9a85a8665527
+RUN cd build && git checkout d95f3d08c8f6a3734fd83750af2aee7f29d9be69
 RUN rm -rf build/.git
 
 # Build runtime image
-FROM python:3.7-slim
+FROM python:3.7
 WORKDIR /app
 
 # Copy from build image
